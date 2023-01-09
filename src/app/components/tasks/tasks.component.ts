@@ -8,7 +8,7 @@ import { Task } from '../button/Task';
   templateUrl: './tasks.component.html',
   styleUrls: ['./tasks.component.css']
 })
-export class TasksComponent {
+export class TasksComponent implements OnInit{
   tasks: Task[] = [];
   
   constructor (private taskService: TaskService) {
@@ -33,7 +33,9 @@ export class TasksComponent {
   }
 
   addTask(task: Task){
-    console.log(task);
-    }
+    this.taskService.addTask(task).subscribe((task)=>{
+      this.tasks.push(task)
+    })
+  }
 
   }
