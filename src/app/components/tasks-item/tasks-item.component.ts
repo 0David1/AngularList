@@ -9,9 +9,9 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./tasks-item.component.css']
 })
 export class TasksItemComponent {
-  @Input() task: Task = TASKS[0]
-  @Output() onDeleteTask: EventEmitter<Task> = new EventEmitter()
-  @Output() onToggleReminder: EventEmitter<Task> = new EventEmitter()
+  @Input() task: Task = TASKS[0];
+  @Output() onDeleteTask: EventEmitter<Task> = new EventEmitter();
+  @Output() onToggleReminder: EventEmitter<Task> = new EventEmitter();
   faTimes = faTimes;
 
   onDelete(task: Task){
