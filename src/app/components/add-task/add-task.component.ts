@@ -11,6 +11,7 @@ export class AddTaskComponent implements OnInit{
   text:string= "";
   day:string = "";
   reminder:boolean = false;
+  id:number=5;
 
   constructor(){ }
 
@@ -25,10 +26,11 @@ export class AddTaskComponent implements OnInit{
       return
     }
 
-    const {text,day,reminder} = this
-    const newTask = {text, day, reminder}
+    const {text,day,reminder,id} = this
+    const newTask = {text,day,reminder,id}
 
     this.onAddTask.emit(newTask);
+    
   }
 
 }
