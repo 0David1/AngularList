@@ -19,12 +19,13 @@ export class AddTaskComponent implements OnInit{
 
   onSubmit(){
     if(this.text.length === 0){
-      alert("Please add a task")
+      alert("Please add a task");
       return
     }
 
     const {text,day,reminder} = this
     const newTask = {text,day,reminder}
+
     this.onAddTask.emit(newTask);
 
   }

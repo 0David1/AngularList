@@ -22,5 +22,4 @@ export class TasksItemComponent {
     this.onToggleReminder.emit(task)
   }
 
-
 }
