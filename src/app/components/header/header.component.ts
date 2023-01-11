@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
   title: string = 'Task List';
-  showAddTask: boolean = true;
+  showAddTask: boolean = false;
   subscription?: Subscription;
 
   constructor(
